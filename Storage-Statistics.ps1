@@ -1,8 +1,3 @@
- 
-
-cls 
-
- 
 
 # CONVERT AND LABEL DISK SIZES TO KB/MB/GB 
 # ======================================== 
