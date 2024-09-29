@@ -12,7 +12,7 @@ if ($GrafanaService) { Write-Host "CS Falcon Service Found..."
                       
                                         Start-Process -NoNewWindow -FilePath "C:\Install\CsUninstallTool.exe" -ArgumentList "/quiet" -wait
 
-                                         sleep 3
+                                         Start-Sleep 3
 
                                          #Create new variable for removal verification
                                          $GrafanaServiceUninstall = Get-WmiObject -Class Win32_Service -Filter "Name='csfalconservice'" 
