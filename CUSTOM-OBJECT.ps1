@@ -1,4 +1,4 @@
-
+# Source: https://stackoverflow.com/questions/62110520/how-can-i-get-my-function-to-run-the-custom-object-for-the-computer-names 
 # Define new object variable objects
 $os = Get-WmiObject –class Win32_OperatingSystem –comp localhost 
 
