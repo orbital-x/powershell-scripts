@@ -9,4 +9,4 @@ $SMTPServer = "mailrouter.contoso.com"
 $Attachment = "C:\Temp\contoso.jpg"
 
 # Send message with variables
-Send-MailMessage -From $From -to $To -Subject $Subject -Body $Body -BodyAsHtml -SmtpServer $SMTPServer   -Attachments $Attachment
+Send-MailMessage -From $From -to $To -Cc $CC -Subject $Subject -Body $Body -BodyAsHtml -SmtpServer $SMTPServer   -Attachments $Attachment

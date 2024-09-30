@@ -1,3 +1,18 @@
+<#
+   .NOTES
+        Author: Roboute Guilliman
+        Created: 09/23
+
+    .SYNOPSIS
+        Crowdstrike Falcon removal
+
+    .DESCRIPTION
+        -Removes CS Falcon agent from machine by first check if the service is installed. 
+        -Verifies "csuninstalltool.exe" is located on the local system drive
+#>
+
+
+
 #Check for CS Falcon service
 $GrafanaService = Get-WmiObject -Class Win32_Service -Filter "Name='csfalconservice'" 
 
