@@ -16,6 +16,7 @@ $ServerList = Get-File
 $servers = Get-Content $ServerList 
 
 # Array with contents from file selected
+# Make sure to enter $server variable when referencing the object you're targeting
 foreach ($server in $servers) {"Do something"} 
 
  
