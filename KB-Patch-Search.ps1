@@ -2,5 +2,5 @@
 Get-HotFix | Sort-Object InstalledOn -Descending 
 
 # Search for specific patch\kb 
-Get-HotFix | ? {$_.hotfixid -eq "KB2919355"} 
-Get-HotFix | ? {$_.hotfixid -like "*19355*"} 
+Get-HotFix | Where-Object {$_.hotfixid -eq "KB2919355"} 
+Get-HotFix | Where-Object {$_.hotfixid -like "*19355*"} 
