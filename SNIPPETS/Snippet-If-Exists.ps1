@@ -1,29 +1,28 @@
 <#
-   .NOTES
+    .NOTES
         Author: Roboute Guilliman
-        Created: 2018
+        Created: 09/2024
 
     .SYNOPSIS
-        Creates WINDOWS SUPPORT folder on user's desktop
+        2-scenario example that uses a variable to see if something is "$true" or not
 
     .DESCRIPTION
         -Powershell uses the "!" as a logical "not" operator
-        -If used next to a valible, it would mean not $TRUE or existent
+        -If used next to a variable, it would mean not $TRUE or existent
 #>
 
 
-
 # IF EXISTS
-$firefox = Get-Process xmofts -ErrorAction SilentlyContinue
+$procesname = Get-Process xmofts -ErrorAction SilentlyContinue
 
-if ($firefox) {write-host "Process Exists"}
+if ($processname) {write-host "Process Exists"}
 else {Write-Host "Process doesn't exist"}
 
 
 
 # DOES NOT EXIST
-$firefox = Get-Process xmofts -ErrorAction SilentlyContinue
+$processname = Get-Process xmofts -ErrorAction SilentlyContinue
 
-if (!$firefox) {Write-Host "Does not exist"}
+if (!$processname) {Write-Host "Does not exist"}
 else {Write-Host "Process Exists"}
 

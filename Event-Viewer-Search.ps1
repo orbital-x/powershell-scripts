@@ -1,3 +1,16 @@
+<#
+    .NOTES
+        Author: Roboute Guilliman
+        Created: 09/2024
+
+    .SYNOPSIS
+        Multiple quieries for searching Event Viewer logs
+
+    .DESCRIPTION
+        -Copy only the one you wish to use for querying.
+        -Change the string in the "where-objec" to that of what you're searching for.
+#>
+
 
 # Event Viewer: String in System log 
 Get-WinEvent -FilterHashtable @{logname='system'} | Where-Object  { $_.message -like '*grafana*' } |  Select-Object -first 25 | Format-Table -Wrap 

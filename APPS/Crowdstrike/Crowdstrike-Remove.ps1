@@ -12,7 +12,6 @@
 #>
 
 
-
 #Check for CS Falcon service
 $GrafanaService = Get-WmiObject -Class Win32_Service -Filter "Name='csfalconservice'" 
 

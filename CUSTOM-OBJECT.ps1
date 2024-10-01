@@ -1,3 +1,17 @@
+<#
+    .NOTES
+        Author: Roboute Guilliman
+        Created: 09/2024
+
+    .SYNOPSIS
+        Queries Active Directory for a user or computer's group membership
+
+    .DESCRIPTION
+        -The Get-ADPrincipalGroupMembership cmdlet gets the Active Directory groups that have a specified user, computer, group, or service account as a member. 
+        -This cmdlet requires a global catalog to perform the group search. 
+#>
+
+
 # Source: https://stackoverflow.com/questions/62110520/how-can-i-get-my-function-to-run-the-custom-object-for-the-computer-names 
 # Define new object variable objects
 $os = Get-WmiObject –class Win32_OperatingSystem –comp localhost 
