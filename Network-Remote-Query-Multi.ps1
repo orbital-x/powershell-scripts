@@ -15,6 +15,7 @@
 
 
 # NO SCRIPT BLOCK - External Commands 
+# ===============================================================================
 Function Get-File($initialDirectory) {    
  [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | 
  Out-Null 
@@ -37,7 +38,9 @@ foreach ($server in $Scopename) {write-host $server
 
  
 
-# WITH SCRIPT-BLOCK     
+# WITH SCRIPT-BLOCK
+# ===============================================================================
+
 Function Get-File($initialDirectory) {    
  [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | 
  Out-Null 
