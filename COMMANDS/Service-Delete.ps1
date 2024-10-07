@@ -12,7 +12,6 @@
 
     .SOURCE
         https://stackoverflow.com/questions/4967496/check-if-a-windows-service-exists-and-delete-in-powershell
-
 #>
 
 
