@@ -18,7 +18,7 @@
 
 
 # Clears all recycle bins (CMD Admin required)
-rd /s c:\$Recycle.Bin 
+rm /s c:\$Recycle.Bin 
 
 
 # Clears recycle bin for current user (Powershell 7)
