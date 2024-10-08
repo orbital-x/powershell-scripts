@@ -13,7 +13,7 @@
 
 
 # IF EXISTS
-$procesname = Get-Process xmofts -ErrorAction SilentlyContinue
+$processname = Get-Process xmofts -ErrorAction SilentlyContinue
 
 if ($processname) {write-host "Process Exists"}
 else {Write-Host "Process doesn't exist"}
