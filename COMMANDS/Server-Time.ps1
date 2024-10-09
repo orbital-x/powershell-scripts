@@ -17,4 +17,4 @@ w32tm /query /peers
 w32tm /query /source 
 
 # To update, use the command below (2008 and 2012 server compatible): 
-w32tm /config /manualpeerlist:"ntp_server" /syncfromflags:manual /reliable:yes /update 
+w32tm /config /manualpeerlist:"ntp_server" /syncfromflags:manual /reliable:yes /update
