@@ -1,3 +1,9 @@
+<#
+    .NOTES
+        Make sure "Windows Time" service is in "running"state
+#>
+
+
 # Start/stop  time service 
 net stop w32time 
 net start w32time 
