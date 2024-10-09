@@ -12,8 +12,8 @@
 #>
 
 
-# Event Viewer: String in System log 
-Get-WinEvent -FilterHashtable @{logname='system'} | Where-Object  { $_.message -like '*grafana*' } |  Select-Object -first 25 | Format-Table -Wrap 
+# Event Viewer: String in System log - "Format-Table -Wrap" as alternative output to "out-gridview"
+Get-WinEvent -FilterHashtable @{logname='system'} | Where-Object  { $_.message -like '*grafana*' } |  Select-Object -first 25 | Out-GridView
 
 # Event Viewer: Reboots\Restarts
 Get-WinEvent -FilterHashtable @{logname='system'} | Where-Object  {$_.id -match '1074|6006|6005|1076|6008' -or $_.id -eq '41' } | Select-Object timecreated,id,message | Out-GridView 
