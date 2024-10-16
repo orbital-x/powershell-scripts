@@ -17,3 +17,10 @@ Get-ADPrincipalGroupMembership UserID | sort-object | Select-Object name
 
 #COMPUTER-Memebership
 Get-ADPrincipalGroupMembership (Get-ADComputer computername).DistinguishedName | select-object samaccountname 
+
+#======================
+
+# FOLDER-Membership
+$TargetFolder = "\\folder\directory"
+
+(Get-Acl -Path $TargetFolder).Access | select identityreference
