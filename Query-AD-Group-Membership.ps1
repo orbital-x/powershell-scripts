@@ -23,4 +23,4 @@ Get-ADPrincipalGroupMembership (Get-ADComputer computername).DistinguishedName |
 # FOLDER-Membership
 $TargetFolder = "\\folder\directory"
 
-(Get-Acl -Path $TargetFolder).Access | select identityreference
+(Get-Acl -Path $TargetFolder).Access | Select-Object identityreference

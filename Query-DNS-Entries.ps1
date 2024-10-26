@@ -33,6 +33,6 @@ $arraylist = @()
 
 
 
-foreach ($server in $servers) {$arraylist += resolve-DnsName $server -ea SilentlyContinue | ? {$_.section -eq "Answer"} | Select-Object name,ipaddress}
+foreach ($server in $servers) {$arraylist += resolve-DnsName $server -ea SilentlyContinue | Where-Object {$_.section -eq "Answer"} | Select-Object name,ipaddress}
 
 $arraylist 
