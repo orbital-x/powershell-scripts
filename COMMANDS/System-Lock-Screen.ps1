@@ -7,7 +7,7 @@
         -Command to create a batch file that locks the screen
 
     .DESCRIPTION
-        -Open notepad, past command to it and save it as "name.bat"
+        -Open notepad, paste command,and save it as "LockMe.bat"
 #>
 
 rundll32.exe user32.dll,LockWorkStation
