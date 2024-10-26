@@ -31,8 +31,6 @@ $servers = Get-Content $ServerList
 # Array with contents from file selected
 $arraylist = @()
 
-
-
 foreach ($server in $servers) {$arraylist += resolve-DnsName $server -ea SilentlyContinue | Where-Object {$_.section -eq "Answer"} | Select-Object name,ipaddress}
 
 $arraylist 
