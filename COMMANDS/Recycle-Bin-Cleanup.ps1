@@ -28,4 +28,4 @@ Clear-RecycleBin -force
 Clear-RecycleBin -DriveLetter C
 
 # Clears recycle bin for all drives, no prompt
-Clear-RecycleBin -Force
+Clear-RecycleBin -Forcej
