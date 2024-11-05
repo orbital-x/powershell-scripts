@@ -12,18 +12,19 @@
 #>
 
 
-# USER-memebership
+# AD-USER-memebership
 Get-ADPrincipalGroupMembership UserID | sort-object | Select-Object name 
 
-#-------------------------------------------------------------------------------------------------------------
-
-
-#COMPUTER-Memebership
+#AD-COMPUTER-Memebership
 Get-ADPrincipalGroupMembership (Get-ADComputer computername).DistinguishedName | select-object samaccountname 
 
 
 #-------------------------------------------------------------------------------------------------------------
-# FOLDER-Membership
+# Network-FOLDER-Membership
 $TargetFolder = "\\folder\directory"
-
 (Get-Acl -Path $TargetFolder).Access | Select-Object identityreference
+
+
+#-------------------------------------------------------------------------------------------------------------
+#LOCAL-Group-Membership
+Get-LocalGroupMember -Group "Administrators"
