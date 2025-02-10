@@ -2,4 +2,4 @@
 systeminfo | find /i "install date"
 
 # Using WMI class
-(Get-WmiObject win32_operatingsystem).installdate
+([WMI]'').ConvertToDateTime((Get-WmiObject Win32_OperatingSystem).InstallDate)
