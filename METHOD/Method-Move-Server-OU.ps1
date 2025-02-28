@@ -9,6 +9,7 @@ write-host "Current location..." -ForegroundColor Yellow
 write-host ""
 write-host "Moving server to new location.." -ForegroundColor Yellow
 Start-Sleep 3
+# Example....
 Get-ADComputer $moveme | Move-ADObject -TargetPath 'OU=CCTV Servers,OU=Servers,DC=safeway01,DC=ad,DC=safeway,DC=com'
 
 Write-Host ""
